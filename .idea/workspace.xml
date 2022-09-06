@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9c7cd12c-bc81-4ab7-954a-649bfacd71dc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hw12/CollectionFamilyDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hw12/ConsoleApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hw12/DataConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hw12/DayOfWeek.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hw12/Dog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hw12/DomesticCat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hw12/Family.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hw12/FamilyController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hw12/FamilyDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hw12/FamilyService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hw12/FamilyServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hw12/FamilyTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hw12/Fish.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hw12/Foulable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hw12/GenderOfPerson.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hw12/Horse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hw12/Human.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hw12/HumanTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hw12/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hw12/Man.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hw12/Pet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hw12/PetTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hw12/RoboCat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hw12/Species.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hw12/Woman.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hw12/prettyFormat.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2EO2gzFIUYUz4t4BcEkG84u0QVf" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager" selected="JUnit.FamilyServiceTest">
+    <configuration name="FamilyServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Tasks_abb" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hw12.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="hw12" />
+      <option name="MAIN_CLASS_NAME" value="hw12.FamilyServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FamilyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Tasks_abb" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hw12.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="hw12" />
+      <option name="MAIN_CLASS_NAME" value="hw12.FamilyTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FamilyTest.toStringTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Tasks_abb" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hw12.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="hw12" />
+      <option name="MAIN_CLASS_NAME" value="hw12.FamilyTest" />
+      <option name="METHOD_NAME" value="toStringTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HumanTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Tasks_abb" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hw12.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="hw12" />
+      <option name="MAIN_CLASS_NAME" value="hw12.HumanTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Tasks_abb" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hw12.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="hw12" />
+      <option name="MAIN_CLASS_NAME" value="hw12.PetTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.FamilyServiceTest" />
+        <item itemvalue="JUnit.FamilyTest.toStringTest" />
+        <item itemvalue="JUnit.FamilyTest" />
+        <item itemvalue="JUnit.PetTest" />
+        <item itemvalue="JUnit.HumanTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9c7cd12c-bc81-4ab7-954a-649bfacd71dc" name="Changes" comment="" />
+      <created>1662452432648</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1662452432648</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
