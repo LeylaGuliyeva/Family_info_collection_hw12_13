@@ -1,4 +1,5 @@
-package hw12;
+package hw13;
+
 import java.util.Objects;
 import java.util.Set;
 public abstract class Pet implements prettyFormat {
@@ -40,7 +41,7 @@ public abstract class Pet implements prettyFormat {
     }
     @Override
     public String prettyFormat(){
-
+        
     }
 
     public Set<String> getHabits() {

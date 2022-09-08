@@ -1,4 +1,5 @@
-package hw12;
+package hw13;
+
 import java.util.Calendar;
 import java.util.Map;
 import java.util.Objects;
@@ -7,7 +8,7 @@ import java.util.stream.Collectors;
 import static hw12.DataConverter.LongToString;
 
 
-public class Human implements prettyFormat{
+public class Human implements prettyFormat {
     protected String name;
     protected String surname;
     protected long birthDate;
