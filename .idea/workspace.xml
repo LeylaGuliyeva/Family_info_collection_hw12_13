@@ -5,37 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c7cd12c-bc81-4ab7-954a-649bfacd71dc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw13/CollectionFamilyDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw13/ConsoleApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw13/DataConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw13/DayOfWeek.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw13/Dog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw13/DomesticCat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw13/Family.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw13/FamilyController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw13/FamilyDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw13/FamilyService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw13/FamilyServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw13/FamilyTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw13/Fish.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw13/Foulable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw13/GenderOfPerson.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw13/Horse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw13/Human.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw13/HumanTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw13/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw13/Man.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw13/Pet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw13/PetTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw13/RoboCat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw13/Species.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw13/Woman.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw13/prettyFormat.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hw12/Family.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw12/Family.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hw12/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw12/Human.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hw12/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw12/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hw12/Pet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw12/Pet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
