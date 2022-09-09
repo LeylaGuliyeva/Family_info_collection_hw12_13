@@ -41,6 +41,7 @@ public abstract class Pet implements prettyFormat {
     }
     @Override
     public String prettyFormat(){
+        return new String();
         
     }
 

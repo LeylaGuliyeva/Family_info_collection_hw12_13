@@ -6,17 +6,17 @@ public class CollectionFamilyDao implements FamilyDao {
     List<Family> allFam;
 
     public CollectionFamilyDao() {
-        Human Samin=new Human("Samin","Alakbarov","30/07/1982");
-        Human Lala=new Human("Lala","Alakbarova","19/05/2000") ;
+        List<Family> famList=new ArrayList<>();
+        Man Samin=new Man("Samin","Alakbarov","30/07/1982");
+        Woman Lala=new Woman("Lala","Alakbarova","19/05/2000") ;
         Human Mukhtar = new Human("Mukhtar", "Asgerli", "12/12/1984");
-        Human Loya = new Human("Loya", "Asgerli", "14/03/1990");
+        Woman Loya = new Woman("Loya", "Asgerli", "14/03/1990");
         Human Ali = new Human("Ali", "Suleymanzada", "16/09/1988");
-        Human Ayda = new Human("Ayda", "Suleymanzada", "06/05/1992");
-
-        Human Eren=new Human("Eren","Alakbarov","12/10/2021");
-        Human Erem = new Human("Erem", "Asgerli", "11/08/2010");
-        Human Mikasa = new Human("Mikasa", "Alakbarova", "12/04/2004");
-        Human Aurora = new Human("Aurora", "Suleymanzada", "08/09/2013");
+        Woman Ayda = new Woman("Ayda", "Suleymanzada", "06/05/1992");
+        Man Eren=new Man("Eren","Alakbarov","12/10/2021");
+        Man Erem = new Man("Erem", "Asgerli", "11/08/2010");
+        Woman Mikasa = new Woman("Mikasa", "Alakbarova", "12/04/2004");
+        Woman Aurora = new Woman("Aurora", "Suleymanzada", "08/09/2013");
         DomesticCat kitten = new DomesticCat("Shine");
 
         Family family1 = new Family(Lala, Samin);
@@ -32,6 +32,15 @@ public class CollectionFamilyDao implements FamilyDao {
         allFam.add(family2);
         allFam.add(family3);
     }
+
+
+    public void setAllFam(List<Family> allFam) {
+        this.allFam = allFam;
+    }
+
+    public CollectionFamilyDao(List<Family> a){
+        allFam=a;
+    };
     @Override
     public List<Family> getAllFamilies(){
         List<Family> allFamilies=allFam;

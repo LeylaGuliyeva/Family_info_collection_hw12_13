@@ -40,7 +40,8 @@ public abstract class Pet implements prettyFormat {
     }
     @Override
     public String prettyFormat(){
-
+        String str=String.format("{species=%s, nickname='%s', age=%d, trickLevel=%d, habits=%s}",species,nickname,age,trickLevel,habits);
+        return str;
     }
 
     public Set<String> getHabits() {

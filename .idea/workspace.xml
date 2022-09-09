@@ -6,6 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="9c7cd12c-bc81-4ab7-954a-649bfacd71dc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hw12/CollectionFamilyDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw12/CollectionFamilyDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hw12/ConsoleApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw12/ConsoleApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hw12/Family.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw12/Family.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hw12/FamilyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw12/FamilyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hw12/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw12/Human.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hw12/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw12/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hw12/Pet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw12/Pet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hw13/Pet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw13/Pet.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,13 +43,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "D:/ABB tech/Tasks_abb/src/main/java/hw13"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/ABB tech/Tasks_abb/src/main/java/hw13&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\ABB tech\Tasks_abb\src\main\java\hw13" />

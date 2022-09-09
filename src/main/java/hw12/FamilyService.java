@@ -3,15 +3,28 @@ package hw12;
 import java.util.*;
 
 public class FamilyService {
-    FamilyDao famDao = new CollectionFamilyDao();
+    FamilyDao famDao;
+
+    public void setFamDao(FamilyDao famDao) {
+        this.famDao = famDao;
+    }
 
     public List<Family> getAllFamilies() {
         return famDao.getAllFamilies();
     }
     public void displayAllFamilies() {
         System.out.println("Families :");
-        famDao.getAllFamilies().stream().forEach(System.out::print);
+        famDao.getAllFamilies().stream().forEach(x->System.out.println(String.valueOf(getFamilyIndex(famDao.getAllFamilies(),x))+x.prettyFormat()));
     }
+    public int getFamilyIndex(List<Family> fml,Family fm){
+        for(int i=0;i<fml.size();i++){
+            if(fml.get(i).equals(fm)){
+                return i;
+            }
+        }
+        return 0;}
+
+
 
     public List<Family> getFamiliesBiggerThan(int x) {
         List<Family> famBiggerThan = new ArrayList<>();
@@ -20,7 +33,7 @@ public class FamilyService {
                 famBiggerThan.add(z);
             }
         });
-        System.out.println(famBiggerThan.toString());
+        famBiggerThan.forEach(f->System.out.println(f.prettyFormat()));
         return famBiggerThan;
     }
     public List<Family> getFamiliesLessThan(int x) {
@@ -30,7 +43,7 @@ public class FamilyService {
                 famLessThan.add(z);
             }
         });
-        System.out.println(famLessThan.toString());
+        famLessThan.forEach(f->System.out.println(f.prettyFormat()));
         return famLessThan;
     }
     public int countFamiliesWithMemberNumber(int x) {
