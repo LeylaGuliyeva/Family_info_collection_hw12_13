@@ -6,6 +6,9 @@ final public class Man extends Human {
     public Man(String name, String surname, String bd) {
         super(name, surname, bd);
     }
+    public Man(String name, String surname, String bd,byte iq) {
+        super(name, surname, bd,iq);
+    }
 
     public Man(String name, String surname, String bd, byte iq, Map<DayOfWeek, String> schedule, Family fam, Pet pet) {
         super(name, surname, bd, iq, schedule,fam, pet);

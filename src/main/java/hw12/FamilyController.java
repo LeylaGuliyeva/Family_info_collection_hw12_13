@@ -25,8 +25,8 @@ public class FamilyController {
     public void deleteFamilyByIndex(int x){
         famSer.deleteFamilyByIndex(x);
     }
-    public Family bornChild(Family fam, GenderOfPerson gen){
-        return famSer.bornChild(fam,gen);
+    public Family bornChild(Family fam, GenderOfPerson gen,String name){
+        return famSer.bornChild(fam,gen,name);
     }
     public Family adoptChild(Family fam, Human h){
         return famSer.adoptChild(fam,h);

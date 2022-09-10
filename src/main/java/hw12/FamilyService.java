@@ -4,6 +4,9 @@ import java.util.*;
 
 public class FamilyService {
     FamilyDao famDao;
+    public FamilyService(){
+        famDao=new CollectionFamilyDao();
+    }
 
     public void setFamDao(FamilyDao famDao) {
         this.famDao = famDao;
@@ -14,7 +17,7 @@ public class FamilyService {
     }
     public void displayAllFamilies() {
         System.out.println("Families :");
-        famDao.getAllFamilies().stream().forEach(x->System.out.println(String.valueOf(getFamilyIndex(famDao.getAllFamilies(),x))+x.prettyFormat()));
+        famDao.getAllFamilies().stream().forEach(x->System.out.println(String.valueOf(getFamilyIndex(famDao.getAllFamilies(),x)+1)+"."+x.prettyFormat()));
     }
     public int getFamilyIndex(List<Family> fml,Family fm){
         for(int i=0;i<fml.size();i++){
@@ -61,9 +64,13 @@ public class FamilyService {
     public void deleteFamilyByIndex(int x){
         famDao.deleteFamily(x);
     }
-    public Family bornChild(Family fam, GenderOfPerson gen){
-        Human baby=new Human(gen== GenderOfPerson.FEMININE?"Ada":"Aidan",fam.getSurname(), Integer.toString(Calendar.getInstance().get(Calendar.YEAR))+"/"+Integer.toString(Calendar.getInstance().get(Calendar.MONTH))+"/"+Integer.toString(Calendar.getInstance().get(Calendar.DAY_OF_MONTH)));
-        fam.addChild(baby);
+    public Family bornChild(Family fam, GenderOfPerson gen,String name){
+        Man baby=new Man(name,fam.getSurname(), Integer.toString(Calendar.getInstance().get(Calendar.YEAR))+"/"+Integer.toString(Calendar.getInstance().get(Calendar.MONTH))+"/"+Integer.toString(Calendar.getInstance().get(Calendar.DAY_OF_MONTH)));
+        Woman baby1=new Woman(name,fam.getSurname(), Integer.toString(Calendar.getInstance().get(Calendar.YEAR))+"/"+Integer.toString(Calendar.getInstance().get(Calendar.MONTH))+"/"+Integer.toString(Calendar.getInstance().get(Calendar.DAY_OF_MONTH)));
+        if(gen.equals(GenderOfPerson.FEMININE)){
+        fam.addChild(baby1);}
+        else if(gen.equals(GenderOfPerson.MASCULINE)){
+            fam.addChild(baby);}
         famDao.saveFamily(fam);
         return fam;}
     public Family adoptChild(Family fam, Human h){

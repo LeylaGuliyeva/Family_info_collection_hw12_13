@@ -6,8 +6,12 @@ import java.util.Scanner;
 
 
 public class ConsoleApp {
-    static Scanner sn=new Scanner(System.in);
+    static Scanner scan=new Scanner(System.in);
     static String str=new String();
+
+    static CollectionFamilyDao cfd=new CollectionFamilyDao();
+    static FamilyService famServ=new FamilyService();
+    static List<Family> famList=new ArrayList<>();
     public static void consoleApplication(){
         do{
             System.out.println("- 1. Fill with test data (create several families and save them in the database)\n" +
@@ -23,18 +27,16 @@ public class ConsoleApp {
                     "  - 3. Return to main menu  \n" +
                     "- 9. Remove all children over the age of majority (all families remove children over the age of majority - let us assume they have grown up)\n");
             System.out.print("Please enter command : ");
-            str=sn.nextLine();
-            CollectionFamilyDao cfd=new CollectionFamilyDao();
-            FamilyService famServ=new FamilyService();
+            str=scan.nextLine();
+            Scanner sn=new Scanner(System.in);
             switch(str){
                 case "1":
-                    List<Family> famList=new ArrayList<>();
                     Man Samin=new Man("Samin","Alakbarov","30/07/1982");
                     Woman Lala=new Woman("Lala","Alakbarova","19/05/2000") ;
                     Human Mukhtar = new Human("Mukhtar", "Asgerli", "12/12/1984");
                     Woman Loya = new Woman("Loya", "Asgerli", "14/03/1990");
                     Human Ali = new Human("Ali", "Suleyanzada", "16/09/1988");
-                    Woman Ayda = new Woman("Ayda", "Suleymanzada", "06/05/1992");
+                    Woman Ayda = new Woman("Ayda", "Suleymanzada", "10/05/1992");
                     Man Eren=new Man("Eren","Alakbarov","12/10/2021");
                     Man Erem = new Man("Erem", "Asgerli", "11/08/2010");
                     Woman Mikasa = new Woman("Mikasa", "Alakbarova", "12/04/2004");
@@ -59,7 +61,8 @@ public class ConsoleApp {
                     break;
                 case "3":
                     System.out.println("Please enter the number : ");
-                    famServ.getFamiliesBiggerThan(sn.nextInt()).forEach(d->System.out.println(d.prettyFormat()));
+                    int p=sn.nextInt();
+                    famServ.getFamiliesBiggerThan(p).forEach(d->d.prettyFormat());
                     break;
                 case "4":
                     System.out.println("Please enter the number : ");
@@ -67,56 +70,96 @@ public class ConsoleApp {
                     break;
                 case "5":
                     System.out.println("Please enter the number : ");
-                    famServ.getAllFamilies().stream().forEach(x->{if(x.countFamily()==sn.nextInt()){
+                    int ageFE=sn.nextInt();
+                    famServ.getAllFamilies().stream().forEach(x->{if(x.countFamily()==ageFE){
                         System.out.println(x.prettyFormat());
                     }});
                     break;
                 case "6":
                     System.out.println("Please enter the name of mother");
-                    String nameM=sn.nextLine();
+                    String nameM=sn.next();
                     System.out.println("Please enter the surname of mother");
-                    String surnameM=sn.nextLine();
+                    String surnameM=sn.next();
                     System.out.println("Please enter the birth year of mother");
-                    String yearM=sn.nextLine();
+                    String yearM=sn.next();
                     System.out.println("Please enter the month of birth of mother");
-                    String monthM=sn.nextLine();
+                    String monthM=sn.next();
                     System.out.println("Please enter the birthday of mother");
-                    String dayM=sn.nextLine();
+                    String dayM=sn.next();
                     System.out.println("Please enter the iq of mother");
                     int iqM=sn.nextInt();
-                    System.out.println("Please enter the name of fatther");
-                    String nameF=sn.nextLine();
+                    System.out.println("Please enter the name of father");
+                    String nameF=sn.next();
                     System.out.println("Please enter the surname of father");
-                    String surnameF=sn.nextLine();
+                    String surnameF=sn.next();
                     System.out.println("Please enter the birth year of father");
-                    String yearF=sn.nextLine();
+                    String yearF=sn.next();
                     System.out.println("Please enter the month of birth of father");
-                    String monthF=sn.nextLine();
+                    String monthF=sn.next();
                     System.out.println("Please enter the birthday of father");
-                    String dayF=sn.nextLine();
+                    String dayF=sn.next();
                     System.out.println("Please enter the iq of father");
                     int iqF=sn.nextInt();
                     Woman mother=new Woman(nameM,surnameM,dayM+"/"+monthM+"/"+yearM);
                     Man father=new Man(nameF,surnameF,dayF+"/"+monthF+"/"+yearF);
                     mother.setIq(iqM);
                     father.setIq(iqF);
-                    Family nfam=new Family(mother,father);
+                    famServ.createNewFamily(mother,father);
                     break;
                 case "7":
-                    System.out.println("Please enter the number : ");
+                    System.out.println("Please enter the index of family : ");
                     famServ.deleteFamilyByIndex(sn.nextInt());
                     break;
                 case "8":
-                    System.out.println("Please enter the number : ");
-                    switch(sn.nextInt()){
-
-                    }
-
-                case "9":
-                default:
-                    System.out.println("Enter valid command!");
+                Scanner sn1=new Scanner(System.in);
+                System.out.println("Please enter the number : ");
+                int r=sn1.nextInt();
+                switch(r){
+                    case 1:
+                        System.out.println("Please enter the ID of family : ");
+                        int famID=sn.nextInt();
+                        System.out.println("Please enter the gender of baby (masculine/feminine) : ");
+                        String gen=sn.next();
+                        GenderOfPerson genB=GenderOfPerson.FEMININE;
+                        if(gen.toUpperCase().equals("MASCULINE")){
+                            genB=GenderOfPerson.MASCULINE;
+                        }
+                        System.out.println("Please enter the name of baby : ");
+                        famServ.bornChild(famServ.getFamilyById(famID),genB, sn.next());
+                        break;
+                    case 2:
+                        System.out.println("Please enter the ID of family : ");
+                        int famID1=sn.nextInt();
+                        System.out.println("Please enter the name and surname of the child : ");
+                        String name1=sn.next();
+                        String surname1=sn.next();
+                        System.out.println("Please enter the birth date of the child (dd/mm/yyyy) : ");
+                        String birthD=sn.next();
+                        System.out.println("Please enter the IQ of the child : ");
+                        int iq1=sn.nextInt();
+                        System.out.println("Please enter the gender of the child (masculine/feminine) : ");
+                        String gen1=sn.next();
+                        Man child=new Man(name1,surname1,birthD,(byte)iq1);
+                        Woman child1=new Woman(name1,surname1,birthD,(byte)iq1);
+                        if(gen1.toUpperCase().equals("MASCULINE")){
+                            famServ.adoptChild(famServ.getFamilyById(famID1),child);
+                        }
+                        else{ famServ.adoptChild(famServ.getFamilyById(famID1),child1);}
+                        break;
+                    case 3:
+                        break;
+                    default:
+                        System.out.println("Enter a valid command! (1,2,3) ");
+                        break;}
                     break;
-            }
+                case "9":
+                    Scanner sm=new Scanner(System.in);
+                    System.out.println("Please enter the age : ");
+                    int age1=sm.nextInt();
+                    famServ.deleteAllChildrenOlderThen(age1);
+                    break;
+                    default:
+                        System.out.println("Enter a valid command! (1-9) ");}
         }while(str.equals("exit")!=true);
 
         }

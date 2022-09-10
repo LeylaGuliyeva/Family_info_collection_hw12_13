@@ -42,8 +42,8 @@ public class FamilyServiceTest {
     }
     @Test
     public void bornChild(){
-        famSerT.bornChild(famSerT.getFamilyById(2), GenderOfPerson.MASCULINE);
-        assertTrue(famSerT.getFamilyById(2).getChildren().get(1).name.equals("Aidan")&&famSerT.getFamilyById(2).getChildren().size()==2);
+        famSerT.bornChild(famSerT.getFamilyById(2), GenderOfPerson.MASCULINE,"Bell");
+        assertTrue(famSerT.getFamilyById(2).getChildren().get(1).name.equals("Bell")&&famSerT.getFamilyById(2).getChildren().size()==2);
     }
     @Test
     public void adoptChild(){
