@@ -4,6 +4,11 @@ import java.util.Set;
 
 public class FamilyController {
     FamilyService famSer=new FamilyService();
+
+    public void setFamSer(FamilyService famSer) {
+        this.famSer = famSer;
+    }
+
     public List<Family> getAllFamilies() {
         return famSer.getAllFamilies();
     }

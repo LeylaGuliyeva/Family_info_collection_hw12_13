@@ -12,6 +12,7 @@ public class ConsoleApp {
     static CollectionFamilyDao cfd=new CollectionFamilyDao();
     static FamilyService famServ=new FamilyService();
     static List<Family> famList=new ArrayList<>();
+    static FamilyController famCont=new FamilyController();
     public static void consoleApplication(){
         do{
             System.out.println("- 1. Fill with test data (create several families and save them in the database)\n" +
@@ -55,6 +56,7 @@ public class ConsoleApp {
                     famList.add(family3);
                     cfd.setAllFam(famList);
                     famServ.setFamDao(cfd);
+                    famCont.setFamSer(famServ);
                     break;
                 case "2":
                     famServ.displayAllFamilies();
@@ -108,7 +110,10 @@ public class ConsoleApp {
                     break;
                 case "7":
                     System.out.println("Please enter the index of family : ");
-                    famServ.deleteFamilyByIndex(sn.nextInt());
+                    int index=sn.nextInt();
+                    if(index>0&&index<famServ.getAllFamilies().size()){
+                        famServ.deleteFamilyByIndex(sn.nextInt());}
+                    else{System.out.println("No such family exits with the index "+index);}
                     break;
                 case "8":
                 Scanner sn1=new Scanner(System.in);
@@ -118,6 +123,9 @@ public class ConsoleApp {
                     case 1:
                         System.out.println("Please enter the ID of family : ");
                         int famID=sn.nextInt();
+                        if(famID<0&&famID>=famServ.getAllFamilies().size()){
+                            System.out.println("No such family exits with the index "+famID);
+                            break;}
                         System.out.println("Please enter the gender of baby (masculine/feminine) : ");
                         String gen=sn.next();
                         GenderOfPerson genB=GenderOfPerson.FEMININE;
@@ -125,11 +133,18 @@ public class ConsoleApp {
                             genB=GenderOfPerson.MASCULINE;
                         }
                         System.out.println("Please enter the name of baby : ");
-                        famServ.bornChild(famServ.getFamilyById(famID),genB, sn.next());
+                        String name=sn.next();
+                        if(famServ.getFamilyById(famID).countFamily()<5){
+                            famServ.bornChild(famServ.getFamilyById(famID),genB, name);
+                        }
+                        else{throw new FamilyOverflowException("Family member number is already reached the limit");}
                         break;
                     case 2:
                         System.out.println("Please enter the ID of family : ");
                         int famID1=sn.nextInt();
+                        if(famID1<0&&famID1>=famServ.getAllFamilies().size()){
+                            System.out.println("No such family exits with the index "+famID1);
+                            break;}
                         System.out.println("Please enter the name and surname of the child : ");
                         String name1=sn.next();
                         String surname1=sn.next();
@@ -141,10 +156,13 @@ public class ConsoleApp {
                         String gen1=sn.next();
                         Man child=new Man(name1,surname1,birthD,(byte)iq1);
                         Woman child1=new Woman(name1,surname1,birthD,(byte)iq1);
-                        if(gen1.toUpperCase().equals("MASCULINE")){
-                            famServ.adoptChild(famServ.getFamilyById(famID1),child);
+                        if(famServ.getFamilyById(famID1).countFamily()<5){
+                            if(gen1.toUpperCase().equals("MASCULINE")){
+                                famServ.adoptChild(famServ.getFamilyById(famID1),child);
+                            }
+                            else{ famServ.adoptChild(famServ.getFamilyById(famID1),child1);}
                         }
-                        else{ famServ.adoptChild(famServ.getFamilyById(famID1),child1);}
+                        else {throw new FamilyOverflowException("Family member number is already reached the limit");}
                         break;
                     case 3:
                         break;
@@ -158,8 +176,11 @@ public class ConsoleApp {
                     int age1=sm.nextInt();
                     famServ.deleteAllChildrenOlderThen(age1);
                     break;
-                    default:
-                        System.out.println("Enter a valid command! (1-9) ");}
+                case "exit":
+                    break;
+                default:
+                    System.out.println("Enter a valid command! (1-9) ");
+                    break;}
         }while(str.equals("exit")!=true);
 
         }
