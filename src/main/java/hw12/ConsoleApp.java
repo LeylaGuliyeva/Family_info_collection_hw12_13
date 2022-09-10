@@ -134,10 +134,7 @@ public class ConsoleApp {
                         }
                         System.out.println("Please enter the name of baby : ");
                         String name=sn.next();
-                        if(famServ.getFamilyById(famID).countFamily()<5){
-                            famServ.bornChild(famServ.getFamilyById(famID),genB, name);
-                        }
-                        else{throw new FamilyOverflowException("Family member number is already reached the limit");}
+                        famCont.bornChild(famServ.getFamilyById(famID),genB, name);
                         break;
                     case 2:
                         System.out.println("Please enter the ID of family : ");
@@ -156,13 +153,10 @@ public class ConsoleApp {
                         String gen1=sn.next();
                         Man child=new Man(name1,surname1,birthD,(byte)iq1);
                         Woman child1=new Woman(name1,surname1,birthD,(byte)iq1);
-                        if(famServ.getFamilyById(famID1).countFamily()<5){
-                            if(gen1.toUpperCase().equals("MASCULINE")){
-                                famServ.adoptChild(famServ.getFamilyById(famID1),child);
-                            }
-                            else{ famServ.adoptChild(famServ.getFamilyById(famID1),child1);}
+                        if(gen1.toUpperCase().equals("MASCULINE")){
+                            famCont.adoptChild(famServ.getFamilyById(famID1),child);
                         }
-                        else {throw new FamilyOverflowException("Family member number is already reached the limit");}
+                        else{ famCont.adoptChild(famServ.getFamilyById(famID1),child1);}
                         break;
                     case 3:
                         break;

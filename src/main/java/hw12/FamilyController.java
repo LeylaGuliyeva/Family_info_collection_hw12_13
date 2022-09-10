@@ -31,10 +31,16 @@ public class FamilyController {
         famSer.deleteFamilyByIndex(x);
     }
     public Family bornChild(Family fam, GenderOfPerson gen,String name){
-        return famSer.bornChild(fam,gen,name);
+        if(fam.countFamily()<5){
+            return famSer.bornChild(fam,gen,name);
+        }
+        else{throw new FamilyOverflowException("Family member number is already reached the limit");}
     }
     public Family adoptChild(Family fam, Human h){
-        return famSer.adoptChild(fam,h);
+        if(fam.countFamily()<5){
+            return famSer.adoptChild(fam,h);
+        }
+        else {throw new FamilyOverflowException("Family member number is already reached the limit");}
     }
     public void deleteAllChildrenOlderThen(int x){
         famSer.deleteAllChildrenOlderThen(x);
