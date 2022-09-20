@@ -1,8 +1,9 @@
 package hw13;
 
+import java.io.Serializable;
 import java.util.Objects;
 import java.util.Set;
-public abstract class Pet implements prettyFormat {
+public abstract class Pet implements prettyFormat, Serializable {
 
     protected Species species;
     protected String nickname;

@@ -177,7 +177,7 @@ public class ConsoleApp {
                         break;
                     case "10":
                         Optional<List<Family>> a=famCont.getPreviouslySavedData();
-                        a.ifPresent(o->IntStream.rangeClosed(0,o.size()-1).forEach(id->System.out.println(String.valueOf(id+1)+o.get(id).prettyFormat())));
+                        a.ifPresent(o->IntStream.rangeClosed(0,o.size()-1).forEach(id->System.out.println(String.valueOf(id+1)+"."+o.get(id).prettyFormat())));
                         if(a.isPresent()==false){
                             System.out.println("No saved data");
                         }

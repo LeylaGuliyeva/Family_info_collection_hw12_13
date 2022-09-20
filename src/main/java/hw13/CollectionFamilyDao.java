@@ -104,15 +104,14 @@ public class CollectionFamilyDao implements FamilyDao {
     @Override
     public void loadData(List<Family> allFamilies) {
         allFam = allFamilies;
+        System.out.println("Data downloaded");
     }
 
     @Override
     public void saveData(List<Family> families) {
         File file = new File(fileName);
         try (ObjectOutputStream os = new ObjectOutputStream(new FileOutputStream(file))) {
-            System.out.println("a");
             for (Family x : families) {
-                System.out.println("9");
                 os.writeObject(x);
             }
             System.out.println("Saved data succesfully");

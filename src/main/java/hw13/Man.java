@@ -1,8 +1,9 @@
 package hw13;
 
+import java.io.Serializable;
 import java.util.Map;
 
-final public class Man extends Human {
+final public class Man extends Human implements Serializable {
 
     public Man(String name, String surname, String bd) {
         super(name, surname, bd);

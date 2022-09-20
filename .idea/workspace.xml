@@ -5,24 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c7cd12c-bc81-4ab7-954a-649bfacd71dc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Interval/Interval.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Interval/Resultant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Practice/Bracket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Practice/Mavi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw13/FamilyOverflowException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hw12/ConsoleApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw12/ConsoleApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Families.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Families.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Families.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hw13/CollectionFamilyDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw13/CollectionFamilyDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hw13/ConsoleApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw13/ConsoleApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hw13/Family.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw13/Family.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hw13/FamilyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw13/FamilyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hw13/FamilyDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw13/FamilyDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hw13/FamilyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw13/FamilyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hw13/FamilyServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw13/FamilyServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hw13/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw13/Human.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hw13/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw13/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hw13/Man.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw13/Man.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hw13/Pet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw13/Pet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hw13/RoboCat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw13/RoboCat.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hw13/Woman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw13/Woman.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

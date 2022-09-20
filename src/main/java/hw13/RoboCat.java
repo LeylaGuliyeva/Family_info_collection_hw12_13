@@ -1,7 +1,7 @@
 package hw13;
 
 import java.util.Set;
-public class RoboCat extends Pet implements Foulable {
+public class RoboCat extends Pet implements Foulable{
     public RoboCat() {
         super();
     }
