@@ -131,7 +131,7 @@ public class Human implements prettyFormat {
     }
     @Override
     public String prettyFormat(){
-        String str=String.format(": {name='%s', surname='%s', birthDate='%s', iq=%s, schedule=%s},",getName(),getSurname(),LongToString(getBirthDate()),getIq()==0?"null":String.valueOf(getIq()),schedule);
+        String str=String.format(": {name='%s', surname='%s', birthDate='%s', iq=%s, schedule=%s},\n",getName(),getSurname(),LongToString(getBirthDate()),getIq()==0?"null":String.valueOf(getIq()),schedule);
         return str;
     }
     @Override

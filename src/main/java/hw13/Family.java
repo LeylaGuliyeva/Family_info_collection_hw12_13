@@ -1,8 +1,11 @@
 package hw13;
 
+import java.io.Serializable;
 import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
-public class Family {
+public class Family implements Serializable {
     private Human mother;
     private Human father;
     private List<Human> children;
@@ -58,16 +61,25 @@ public class Family {
         children.add(a);
         a.setFamily(this);
     }
-//    public String prettyFormat(){
-//        String.format("family: \n" +
-//                "   mother: {name='%s', surname='%s', birthDate='%s', iq=%d, schedule={%s},\n" +
-//                "   father: {name='Karl', surname='Bibo', birthDate='10/12/1990', iq=90, schedule={FRIDAY=library, MONDAY=library}},\n" +
-//                "   children: \n" +
-//                "           boy: {name='Donna', surname='Bibo', birthDate='23/10/2018', iq=92, schedule=null}\n" +
-//                "           girl: {name='Sun', surname='Bibo', birthDate='23/10/2018', iq=92, schedule=null}\n" +
-//                "           boy: {name='Kurt', surname='Kobein', birthDate='05/05/2003', iq=85, schedule={FRIDAY=music}}\n" +
-//                "   pets: [{species=DOG, nickname='Jack', age=3, trickLevel=35, habits=[sleep]}, {species=CAT, nickname='Oscar', age=5, trickLevel=81, habits=[eat, play]}]",mother.name,
-//    }
+    public String prettyFormat(){
+        String str=new String("family: \n");
+        str+="   mother"+mother.prettyFormat()+"   father"+father.prettyFormat()+"   children: \n";
+        for(int i=0;i<children.size();i++){
+            str+="           "+(children.get(i) instanceof Man ?"boy":"girl")+children.get(i).prettyFormat();
+        }
+        str+="   pets: [";
+        int x=pet.size();
+        for(int i=0;i<x;i++){
+            str+=pet.iterator().next().prettyFormat();
+            if(i!=x-1){
+                str+=", ";
+            }
+            pet.remove(pet.iterator().next());
+        }
+        str+="]";
+        return str;
+    }
+
     public boolean deleteChild(Human child) {
         if(children.size() == 0){
             return false;}

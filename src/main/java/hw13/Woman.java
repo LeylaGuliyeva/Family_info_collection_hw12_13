@@ -10,6 +10,11 @@ final public class Woman extends Human {
         super(name, surname, bd);
     }
 
+    public Woman(String name, String surname, String bd,byte iq) {
+        super(name, surname, bd,iq);
+    }
+
+
     public Woman(String name, String surname, String bd, byte iq, Map<DayOfWeek, String> schedule, Family fam, Pet pet) {
         super(name, surname, bd, iq, schedule,fam, pet);
     }

@@ -1,10 +1,16 @@
 package hw13;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 
 public class FamilyController {
     FamilyService famSer=new FamilyService();
+
+    public void setFamSer(FamilyService famSer) {
+        this.famSer = famSer;
+    }
+
     public List<Family> getAllFamilies() {
         return famSer.getAllFamilies();
     }
@@ -26,11 +32,17 @@ public class FamilyController {
     public void deleteFamilyByIndex(int x){
         famSer.deleteFamilyByIndex(x);
     }
-    public Family bornChild(Family fam, GenderOfPerson gen){
-        return famSer.bornChild(fam,gen);
+    public Family bornChild(Family fam, GenderOfPerson gen, String name){
+        if(fam.countFamily()<5){
+            return famSer.bornChild(fam,gen,name);
+        }
+        else{throw new FamilyOverflowException("Family member number is already reached the limit");}
     }
     public Family adoptChild(Family fam, Human h){
-        return famSer.adoptChild(fam,h);
+        if(fam.countFamily()<5){
+            return famSer.adoptChild(fam,h);
+        }
+        else {throw new FamilyOverflowException("Family member number is already reached the limit");}
     }
     public void deleteAllChildrenOlderThen(int x){
         famSer.deleteAllChildrenOlderThen(x);
@@ -46,5 +58,14 @@ public class FamilyController {
     }
     public void addPet(int x, Pet pet){
         famSer.addPet(x,pet);
+    }
+    public void loadData(List<Family> families){
+        famSer.loadData(families);
+    }
+    public void saveData(List<Family> families){
+        famSer.saveData(families);
+    }
+    public Optional<List<Family>> getPreviouslySavedData(){
+        return famSer.getPreviouslySavedData();
     }
 }

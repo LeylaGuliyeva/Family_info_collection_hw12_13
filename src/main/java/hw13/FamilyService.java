@@ -3,15 +3,31 @@ package hw13;
 import java.util.*;
 
 public class FamilyService {
-    FamilyDao famDao = new CollectionFamilyDao();
+    FamilyDao famDao;
+    public FamilyService(){
+        famDao=new CollectionFamilyDao();
+    }
+
+    public void setFamDao(FamilyDao famDao) {
+        this.famDao = famDao;
+    }
 
     public List<Family> getAllFamilies() {
         return famDao.getAllFamilies();
     }
     public void displayAllFamilies() {
         System.out.println("Families :");
-        famDao.getAllFamilies().stream().forEach(System.out::print);
+        famDao.getAllFamilies().stream().forEach(x->System.out.println(String.valueOf(getFamilyIndex(famDao.getAllFamilies(),x)+1)+"."+x.prettyFormat()));
     }
+    public static int getFamilyIndex(List<Family> fml, Family fm){
+        for(int i=0;i<fml.size();i++){
+            if(fml.get(i).equals(fm)){
+                return i;
+            }
+        }
+        return 0;}
+
+
 
     public List<Family> getFamiliesBiggerThan(int x) {
         List<Family> famBiggerThan = new ArrayList<>();
@@ -20,7 +36,7 @@ public class FamilyService {
                 famBiggerThan.add(z);
             }
         });
-        System.out.println(famBiggerThan.toString());
+        famBiggerThan.forEach(f->System.out.println(f.prettyFormat()));
         return famBiggerThan;
     }
     public List<Family> getFamiliesLessThan(int x) {
@@ -30,7 +46,7 @@ public class FamilyService {
                 famLessThan.add(z);
             }
         });
-        System.out.println(famLessThan.toString());
+        famLessThan.forEach(f->System.out.println(f.prettyFormat()));
         return famLessThan;
     }
     public int countFamiliesWithMemberNumber(int x) {
@@ -48,9 +64,13 @@ public class FamilyService {
     public void deleteFamilyByIndex(int x){
         famDao.deleteFamily(x);
     }
-    public Family bornChild(Family fam, GenderOfPerson gen){
-        Human baby=new Human(gen== GenderOfPerson.FEMININE?"Ada":"Aidan",fam.getSurname(), Integer.toString(Calendar.getInstance().get(Calendar.YEAR))+"/"+Integer.toString(Calendar.getInstance().get(Calendar.MONTH))+"/"+Integer.toString(Calendar.getInstance().get(Calendar.DAY_OF_MONTH)));
-        fam.addChild(baby);
+    public Family bornChild(Family fam, GenderOfPerson gen, String name){
+        Man baby=new Man(name,fam.getSurname(), Integer.toString(Calendar.getInstance().get(Calendar.YEAR))+"/"+Integer.toString(Calendar.getInstance().get(Calendar.MONTH))+"/"+Integer.toString(Calendar.getInstance().get(Calendar.DAY_OF_MONTH)));
+        Woman baby1=new Woman(name,fam.getSurname(), Integer.toString(Calendar.getInstance().get(Calendar.YEAR))+"/"+Integer.toString(Calendar.getInstance().get(Calendar.MONTH))+"/"+Integer.toString(Calendar.getInstance().get(Calendar.DAY_OF_MONTH)));
+        if(gen.equals(GenderOfPerson.FEMININE)){
+        fam.addChild(baby1);}
+        else if(gen.equals(GenderOfPerson.MASCULINE)){
+            fam.addChild(baby);}
         famDao.saveFamily(fam);
         return fam;}
     public Family adoptChild(Family fam, Human h){
@@ -80,5 +100,14 @@ public class FamilyService {
         famDao.getFamilyByIndex(x).addPet(pet);
         famDao.saveFamily(famDao.getFamilyByIndex(x));
 
+    }
+    public void loadData(List<Family> families){
+        famDao.loadData(families);
+    }
+    public void saveData(List<Family> families){
+        famDao.saveData(families);
+    }
+    public Optional<List<Family>> getPreviouslySavedData(){
+        return famDao.getPreviouslySavedData();
     }
 }
