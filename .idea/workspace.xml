@@ -6,15 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9c7cd12c-bc81-4ab7-954a-649bfacd71dc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Families.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Families.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Families.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hw13/CollectionFamilyDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw13/CollectionFamilyDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hw13/ConsoleApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw13/ConsoleApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hw13/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw13/Human.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hw13/Man.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw13/Man.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hw13/Pet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw13/Pet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hw13/RoboCat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw13/RoboCat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hw13/Woman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw13/Woman.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
